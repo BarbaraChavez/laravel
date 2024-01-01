@@ -5,20 +5,14 @@ import '@fortawesome/fontawesome-free/css/all.css';
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    createInertiaApp({
-        resolve: name => {
-          const page = {
-            'Dashboard': Dashboard,
-            'Login': Login
-          }[name];
-          return page;
-        },
-        setup({ el, app, props, plugin }) {
-          createApp({ render: () => h(app, props) })
-            .use(plugin)
-            .mount(el);
-        },
-      });
+
+        const toggleButton = document.getElementById('darkModeToggle');
+        const htmlEl = document.documentElement;
+
+        toggleButton.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+        });
+
 
       const formCadastro = document.getElementById("form-cadastro");
       const btnCadastrar = document.getElementById("btn-cadastrar");

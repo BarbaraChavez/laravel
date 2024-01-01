@@ -7,7 +7,7 @@ export default {
     './resources/**/*.jsx',       // Para React (se aplicável)
     // Adicione outros padrões conforme necessário
   ],
-
+ darkMode: 'class', // Adicione esta linha
   theme: {
     extend: {
       colors: {
